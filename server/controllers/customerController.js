@@ -39,37 +39,8 @@ exports.homepage = async (req, res) => {
     console.log(error);
   }
 };
-// exports.homepage = async (req, res) => {
-//     const messages = await req.consumeFlash('info');
-//     const locals = {
-//       title: 'NodeJs',
-//       description: 'Free NodeJs User Management System'
-//     }
 
-//     try {
-//       const customers = await Customer.find({}).limit(22);
-//       res.render('index', { locals, messages, customers } );
-//     } catch (error) {
-//       console.log(error);
-//     }
-// }
 
-/**
- * GET /
- * About
- */
-exports.about = async (req, res) => {
-  const locals = {
-    title: "About",
-    description: "Free NodeJs User Management System",
-  };
-
-  try {
-    res.render("about", locals);
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 /**
  * GET /
